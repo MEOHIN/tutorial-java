@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
+import java.util.*;
 
 public class IndexingString {
     public void getGenderNumber(String pin) {
@@ -40,15 +37,15 @@ public class IndexingString {
         IndexingString indexingString = new IndexingString();
 
         String pin = "881120-1068234";
-        indexingString.getGenderNumber(pin);
+        indexingString.getGenderNumber(pin);    // 1 출력
 
         String a = "a:b:c:d";
-        indexingString.changeString(a);
+        indexingString.changeString(a);    // a#b#c#d 출력
 
-        indexingString.makeDescending();
+        indexingString.makeDescending();    // [1, 3, 5, 4, 2] 출력
 
-        indexingString.combineString();
+        indexingString.combineString();    // "Life is too short" 출력
 
-        indexingString.searchKey();
+        indexingString.searchKey();    // {A=90, C=70}
     }
 }
