@@ -1,5 +1,5 @@
 .gitignore
-.idea
+.idea/*.xml
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
