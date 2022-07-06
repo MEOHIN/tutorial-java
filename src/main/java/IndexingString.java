@@ -33,6 +33,12 @@ public class IndexingString {
         System.out.println(grade);
     }
 
+    public void deduplication() {
+        ArrayList<Integer> numberList = new ArrayList<>(Arrays.asList(1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5));
+        Set<Integer> numberSet = new HashSet<>(numberList);
+        System.out.println(numberSet);
+    }
+
     public static void main(String[] args) {
         IndexingString indexingString = new IndexingString();
 
@@ -47,5 +53,7 @@ public class IndexingString {
         indexingString.combineString();    // "Life is too short" 출력
 
         indexingString.searchKey();    // {A=90, C=70}
+
+        indexingString.deduplication();    // [1, 2, 3, 4, 5] 출력
     }
 }
