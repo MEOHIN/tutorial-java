@@ -18,6 +18,14 @@ public class IndexingString {
         System.out.println(myList);
     }
 
+
+    public void combineString(){
+        ArrayList<String> myList = new ArrayList<>(Arrays.asList("Life", "is", "too", "short"));
+
+        String result = String.join(",", myList);
+        System.out.println(result);
+    }
+
     public static void main(String[] args) {
         IndexingString indexingString = new IndexingString();
 
@@ -28,5 +36,7 @@ public class IndexingString {
         indexingString.changeString(a);
 
         indexingString.makeDescending();
+
+        indexingString.combineString();
     }
 }
