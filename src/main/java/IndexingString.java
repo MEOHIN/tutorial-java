@@ -22,7 +22,7 @@ public class IndexingString {
     public void combineString() {
         ArrayList<String> myList = new ArrayList<>(Arrays.asList("Life", "is", "too", "short"));
 
-        String result = String.join(",", myList);
+        String result = String.join(" ", myList);
         System.out.println(result);
     }
 
