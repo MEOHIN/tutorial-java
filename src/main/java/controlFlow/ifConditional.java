@@ -1,6 +1,6 @@
 package controlFlow;
 
-public class ifStatement {
+public class ifConditional {
     public static void main(String[] args) {
         String a = "Write once, run anywhere";
 
