@@ -1,3 +1,5 @@
+package dataType;
+
 public class Average {
 
     public void AverageScore (int kor, int eng, int math) {

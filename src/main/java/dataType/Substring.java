@@ -1,3 +1,5 @@
+package dataType;
+
 public class Substring {
 
     public void separateIdNum(String id) {

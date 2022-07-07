@@ -1,3 +1,5 @@
+package dataType;
+
 public class OddEven {
 
     public void determineNum(int n) {

@@ -1,3 +1,5 @@
+package dataType;
+
 import java.util.*;
 
 public class IndexingString {
