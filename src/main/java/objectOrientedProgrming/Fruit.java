@@ -18,6 +18,8 @@ interface Beeper {
     void beep();
 }
 
+interface BeeperTropical extends Tropical, Beeper {}
+
 class Fruit {
     String name;
 
@@ -36,7 +38,7 @@ class Avocado extends Fruit implements Tropical, Beeper {
     }
 }
 
-class Banana extends Fruit implements Tropical, Beeper{
+class Banana extends Fruit implements BeeperTropical{
     public String getFactor() {
         return "sunlight";
     }
