@@ -4,7 +4,7 @@ interface Tropical {
     String getFactor();
 
     default void printFactor() {
-        System.out.println("my growth factor is %s\n", getFactor());
+        System.out.printf("my growth factor is %s\n", getFactor());
     }
 
     int FLOWER_COUNT = 5;    // 인터페이스 상수
