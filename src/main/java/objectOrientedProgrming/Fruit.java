@@ -29,3 +29,13 @@ class Farmer {
         System.out.println("grow " + tropical.getFactor());
     }
 }
+
+class Alarm {
+    void beep(Fruit fruit) {
+        if (fruit instanceof Avocado) {    // instanceOf 는 어떤 객체가 특정 클래스의 객체인지 확인하는 자바 내장 명령어
+            System.out.println("삐-");
+        } else if (fruit instanceof Banana) {
+            System.out.println("삐삐");
+        }
+    }
+}
