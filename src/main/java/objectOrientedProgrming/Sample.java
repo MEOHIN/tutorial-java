@@ -6,7 +6,7 @@ public class Sample {
         Banana banana = new Banana();
 
         Alarm alarm = new Alarm();
-        alarm.beep(avocado);
-        alarm.beep(banana);
+        alarm.beepFruit(avocado);
+        alarm.beepFruit(banana);
     }
 }

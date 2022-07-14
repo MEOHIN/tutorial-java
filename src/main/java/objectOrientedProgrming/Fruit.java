@@ -14,6 +14,10 @@ interface Tropical {
     }
 }
 
+interface Beeper {
+    void beep();
+}
+
 class Fruit {
     String name;
 
@@ -26,11 +30,19 @@ class Avocado extends Fruit implements Tropical {
     public String getFactor() {
         return "water";
     }
+
+    public void beep() {
+        System.out.println("삐-");
+    }
 }
 
 class Banana extends Fruit implements Tropical{
     public String getFactor() {
         return "sunlight";
+    }
+
+    public void beep() {
+        System.out.println("삐삐");
     }
 }
 
@@ -41,11 +53,7 @@ class Farmer {
 }
 
 class Alarm {
-    void beep(Fruit fruit) {
-        if (fruit instanceof Avocado) {    // instanceOf 는 어떤 객체가 특정 클래스의 객체인지 확인하는 자바 내장 명령어
-            System.out.println("삐-");
-        } else if (fruit instanceof Banana) {
-            System.out.println("삐삐");
-        }
+    void beepFruit(Beeper fruit) {
+        fruit.beep();
     }
 }
