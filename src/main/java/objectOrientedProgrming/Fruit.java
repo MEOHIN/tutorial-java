@@ -2,6 +2,10 @@ package objectOrientedProgrming;
 
 interface Tropical {
     String getFactor();
+
+    default void printFactor() {
+        System.out.println("my growth factor is %s\n", getFactor());
+    }
 }
 
 class Fruit {
