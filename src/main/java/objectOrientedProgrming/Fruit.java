@@ -6,6 +6,12 @@ interface Tropical {
     default void printFactor() {
         System.out.println("my growth factor is %s\n", getFactor());
     }
+
+    int FLOWER_COUNT = 5;    // 인터페이스 상수
+
+    static int harvest() {
+        return FLOWER_COUNT * 30;
+    }
 }
 
 class Fruit {
