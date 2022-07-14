@@ -26,7 +26,7 @@ class Fruit {
     }
 }
 
-class Avocado extends Fruit implements Tropical {
+class Avocado extends Fruit implements Tropical, Beeper {
     public String getFactor() {
         return "water";
     }
@@ -36,7 +36,7 @@ class Avocado extends Fruit implements Tropical {
     }
 }
 
-class Banana extends Fruit implements Tropical{
+class Banana extends Fruit implements Tropical, Beeper{
     public String getFactor() {
         return "sunlight";
     }
