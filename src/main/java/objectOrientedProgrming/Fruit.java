@@ -1,13 +1,13 @@
 package objectOrientedProgrming;
 
-interface Tropical {
-    String getFactor();
+abstract class Tropical extends Fruit {
+    abstract String getFactor();
 
-    default void printFactor() {
+    void printFactor() {
         System.out.printf("my growth factor is %s\n", getFactor());
     }
 
-    int FLOWER_COUNT = 5;    // 인터페이스 상수
+    static int FLOWER_COUNT = 5;
 
     static int harvest() {
         return FLOWER_COUNT * 30;
@@ -18,8 +18,6 @@ interface Beeper {
     void beep();
 }
 
-interface BeeperTropical extends Tropical, Beeper {}
-
 class Fruit {
     String name;
 
@@ -28,7 +26,7 @@ class Fruit {
     }
 }
 
-class Avocado extends Fruit implements Tropical, Beeper {
+class Avocado extends Tropical implements Beeper {
     public String getFactor() {
         return "water";
     }
@@ -38,7 +36,7 @@ class Avocado extends Fruit implements Tropical, Beeper {
     }
 }
 
-class Banana extends Fruit implements BeeperTropical{
+class Banana extends Tropical implements Beeper{
     public String getFactor() {
         return "sunlight";
     }
