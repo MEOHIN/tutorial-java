@@ -15,6 +15,18 @@ class Apple extends Fruit {
 }
 
 class HomegrownApple extends Apple {
+    HomegrownApple(String name) {
+        this.setName(name);
+    }
+
+    HomegrownApple(int type) {
+        if (type == 1) {
+            this.setName("envy");
+        } else if (type == 2) {
+            this.setName("fuji");
+        }
+    }
+
     void ripe() {
         System.out.println(this.name+" yum in my yard");
     }

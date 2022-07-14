@@ -2,9 +2,9 @@ package objectOrientedProgrming;
 
 public class Sample {
     public static void main(String[] args) {
-        HomegrownApple homeApple = new HomegrownApple();
-        homeApple.setName("red");    // red
-        homeApple.ripe();    // apple yum in my yard
-        homeApple.ripe("this morning");    // apple yum in my yard this morning
+        HomegrownApple red = new HomegrownApple("red");
+        HomegrownApple envy = new HomegrownApple("1");
+        System.out.println(red.name);    // red 출력
+        System.out.println(envy.name);    // envy 출력
     }
 }
