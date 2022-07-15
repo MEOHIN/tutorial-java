@@ -12,6 +12,8 @@ public class teat1 {
         System.out.println("두 번째 숫자 입력 : ");
         int secondNum = input.nextInt();
 
-        System.out.println("첫 번째 숫자 + 두 번째 숫자 = " + (firstNum+secondNum));
+
+        int sum = firstNum + secondNum;
+        System.out.printf("%d + %d = %d", firstNum, secondNum, sum);
     }
 }
