@@ -21,9 +21,7 @@ class Calculator {
     int avg(int[] list) {
         int sum = 0;
 
-        for (int j : list) {
-            sum += j;
-        }
+        for (int i : list)  sum += i;
 
         return sum/list.length;
     }
@@ -31,9 +29,7 @@ class Calculator {
     int avg(ArrayList<Integer> list) {
         int sum = 0;
 
-        for (Integer integer : list) {
-            sum += integer;
-        }
+        for (int j : list)  sum += j;
 
         return sum/list.size();
     }
