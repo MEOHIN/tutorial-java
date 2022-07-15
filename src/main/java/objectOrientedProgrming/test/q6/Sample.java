@@ -2,7 +2,7 @@ package objectOrientedProgrming.test.q6;
 
 class Calculator {
     // Integer 자료형은 값을 대입하지 않을 경우에 null 이다.
-    Integer value = 0;
+    int value;
 
     void add(int val) {
         this.value += val;
