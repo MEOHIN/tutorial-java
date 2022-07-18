@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class test3 {
+public class Test3 {
     public static void main(String[] args) throws IOException {
         String path = "C:\\projects\\jumpto\\java\\datatype\\";
 

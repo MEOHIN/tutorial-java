@@ -3,7 +3,7 @@ package inoutput;
 import java.io.*;
 import java.util.Scanner;
 
-public class test4 {
+public class Test4 {
     public static void main(String[] args) throws IOException {
         String path = "C:\\projects\\jumpto\\java\\datatype\\";
         PrintWriter pw = new PrintWriter(new FileWriter(path + "sample2.txt", true));
