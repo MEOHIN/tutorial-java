@@ -9,11 +9,11 @@ public class test3 {
     public static void main(String[] args) throws IOException {
         String path = "C:\\projects\\jumpto\\java\\datatype\\";
 
-        FileWriter fw = new FileWriter(path + "sample.txt");
+        FileWriter fw = new FileWriter(path + "sample1.txt");
         fw.write("Write once, run anywhere\n");
         fw.close();
 
-        BufferedReader br = new BufferedReader(new FileReader(path + "sample.txt"));
+        BufferedReader br = new BufferedReader(new FileReader(path + "sample1.txt"));
         while (true) {
             String line = br.readLine();
             if (line==null) {
