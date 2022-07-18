@@ -10,7 +10,7 @@ public class test3 {
         String path = "C:\\projects\\jumpto\\java\\datatype\\";
 
         FileWriter fw = new FileWriter(path + "sample.txt");
-        fw.write("Write once, run anywhere");
+        fw.write("Write once, run anywhere\n");
         fw.close();
 
         BufferedReader br = new BufferedReader(new FileReader(path + "sample.txt"));
