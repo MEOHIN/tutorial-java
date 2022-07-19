@@ -1,5 +1,7 @@
 package thread;
 
+import java.util.ArrayList;
+
 public class Sample extends Thread {
     int order;
 
@@ -16,9 +18,19 @@ public class Sample extends Thread {
     }
 
     public static void main(String[] args) {
+        ArrayList<Thread> threads = new ArrayList<>();
+
         for (int i = 0; i < 10; i++) {    // 10개의 thread 를 생성하고 실행
             Thread t = new Sample(i);
             t.start();
+            threads.add(t);
+        }
+
+        for (Thread t : threads) {
+            try {
+                t.join();    // t thread 가 종료될 때까지 대기
+            } catch (InterruptedException e) {
+            }
         }
         System.out.println("main end");    // main 메서드 종료
     }
