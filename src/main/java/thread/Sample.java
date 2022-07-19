@@ -3,7 +3,7 @@ package thread;
 public class Sample extends Thread {
     int order;
 
-    public Sample() {    // 클래스명과 동일한 이름의 메소드는 생성자다: 객체 변수에 값을 생성하도록 강제
+    public Sample(int order) {    // 클래스명과 동일한 이름의 메소드는 생성자다: 객체 변수에 값을 생성하도록 강제
         this.order = order;
     }
 
@@ -17,7 +17,7 @@ public class Sample extends Thread {
 
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {    // 10개의 thread 를 생성하고 실행
-            Thread t = new Sample();
+            Thread t = new Sample(i);
             t.start();
         }
         System.out.println("main end");    // main 메서드 종료
