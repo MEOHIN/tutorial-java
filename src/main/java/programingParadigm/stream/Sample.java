@@ -11,33 +11,18 @@ package programingParadigm.stream;
  * int[] result = {8, 6, 4, 2};
  */
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class Sample {
     public static void main(String[] args) {
         int[] data = {5, 6, 4, 2, 3, 1, 1, 2, 2, 4, 8};
-
-        // 짝수만 포함하는 ArrayList 생성한다.
-        ArrayList<Integer> dataList = new ArrayList<>();
-        for (int datum : data) {
-            if (datum % 2 == 0) {
-                dataList.add(datum);
-            }
-        }
-
-        // List 를 Set 으로 변경해서 중복을 제거한다.
-        HashSet<Integer> dataSet = new HashSet<>(dataList);
-
-        // Set 을 List 로 변경한다.
-        ArrayList<Integer> dedupeDataList = new ArrayList<>(dataSet);
-
-        // 역순으로 정렬한다.
-        dedupeDataList.sort(Comparator.reverseOrder());
-
-        // Integer 리스트를 정수 배열로 변경한다.
-        int[] result = new int[dedupeDataList.size()];
-        for (int i = 0; i < dedupeDataList.size(); i++) {
-            result[i] = dedupeDataList.get(i);
-        }
+        int[] result = Arrays.stream(data)    // IntStream 을 생성한다.
+                .boxed()    // IntStream 을 Stream<Integer> 로 변경한다: Comparator.reverseOrder() 에서 Integer 가 필요하기 때문이다.
+                .filter((i) -> i % 2 == 0)    // 짝수를 선별한다.
+                .distinct()    // 중복을 제거한다.
+                .sorted(Comparator.reverseOrder())    // 역순으로 정렬한다.
+                .mapToInt(Integer::intValue)    // Stream<Integer> 를 IntStream 으로 변경한다: 최종적으로 int[] 타입을 반환해야하기 때문이다.
+                .toArray();    // int[] 배열로 반환한다.
     }
 }
