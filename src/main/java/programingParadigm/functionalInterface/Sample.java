@@ -4,16 +4,13 @@ interface MyInterface {
     void getMessage(String message);
 }
 
-class MyClass implements MyInterface {
-    public void getMessage(String message) {
-        System.out.println(message);
-    }
-}
-
 class MyApp {
     MyApp() {
-        MyClass mc = new MyClass();
-        showMessage(mc);
+        showMessage(new MyInterface() {
+            public void getMessage(String message) {
+                System.out.println(message);
+            }
+        });
     }
 
     void showMessage(MyInterface arg) {
