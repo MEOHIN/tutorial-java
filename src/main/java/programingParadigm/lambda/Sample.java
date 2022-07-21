@@ -1,4 +1,4 @@
-package lambda;
+package programingParadigm.lambda;
 
 @FunctionalInterface
 interface Calculator {
