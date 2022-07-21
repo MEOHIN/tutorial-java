@@ -1,12 +1,13 @@
 package programingParadigm.functionalInterface;
 
+@FunctionalInterface
 interface MyInterface {
     void getMessage(String message);
 }
 
 class MyApp {
     MyApp() {
-        showMessage(message -> System.out.println(message));
+        showMessage(System.out::println);
     }
 
     void showMessage(MyInterface arg) {
