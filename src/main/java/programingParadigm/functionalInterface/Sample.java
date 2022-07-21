@@ -6,11 +6,7 @@ interface MyInterface {
 
 class MyApp {
     MyApp() {
-        showMessage(new MyInterface() {
-            public void getMessage(String message) {
-                System.out.println(message);
-            }
-        });
+        showMessage(message -> System.out.println(message));
     }
 
     void showMessage(MyInterface arg) {
