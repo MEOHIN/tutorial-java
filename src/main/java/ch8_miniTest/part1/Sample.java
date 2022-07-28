@@ -1,4 +1,4 @@
-package ch8_miniProjects.part1;
+package ch8_miniTest.part1;
 
 /***
  * 1000 미만의 자연수에서 3의 배수와 5의 배수의 총합을 구하라.

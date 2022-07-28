@@ -1,4 +1,4 @@
-package ch8_miniProjects.part4;
+package ch8_miniTest.part4;
 
 import java.util.Scanner;
 
