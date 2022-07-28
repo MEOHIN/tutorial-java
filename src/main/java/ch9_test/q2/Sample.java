@@ -12,9 +12,6 @@ public class Sample {
         a.put("A", 90);
         a.put("B", 80);
 
-        if (!a.containsKey("C")) {
-            a.put("C", 70);
-        }
-        System.out.println(a.get("C"));
+        System.out.println(a.getOrDefault("C", 70));
     }
 }
