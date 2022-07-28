@@ -7,7 +7,7 @@ package ch9_test;
  * a#b#c#d
  */
 
-public class Q1 {
+public class StringJoin {
     public static void main(String[] args) {
         String str = "a:b:c:d";
         String[] strArray = str.split(":");
