@@ -1,4 +1,4 @@
-package ch9_test;
+package ch9_test.q1;
 
 /**
  * 다음과 같은 문자열이 있다.
