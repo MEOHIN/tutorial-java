@@ -1,8 +1,5 @@
 package ch9_test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * 다음과 같은 문자열이 있다.
  * a:b:c:d
@@ -14,14 +11,7 @@ public class Q1 {
     public static void main(String[] args) {
         String str = "a:b:c:d";
         String[] strArray = str.split(":");
-        ArrayList<String> strList = new ArrayList<>(Arrays.asList(strArray));
-        String result = "";
-
-        for (String s : strList) {
-            result += s;
-            result += "#";
-        }
-        result = result.substring(0, result.length()-1);
+        String result = String.join("#", strArray);
         System.out.println(result);
     }
 }
