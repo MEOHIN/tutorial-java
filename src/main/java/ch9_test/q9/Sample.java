@@ -1,5 +1,7 @@
 package ch9_test.q9;
 
+import java.util.Arrays;
+
 /**
  * 다음과 같이 동작하는 클래스 Calculator를 작성하시오.
  *
@@ -26,11 +28,7 @@ class Calculator {
     }
 
     int sum() {
-        int total = 0;
-        for (int num : this.data) {
-            total += num;
-        }
-        return total;
+        return Arrays.stream(this.data).sum();
     }
 
     float avg() {
