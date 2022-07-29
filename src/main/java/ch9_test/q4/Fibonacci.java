@@ -17,12 +17,13 @@ public class Fibonacci {
 
         while (true) {
             int nextNum = firstNum + secondNum;
-            System.out.println(nextNum);
-            firstNum = secondNum;
-            secondNum = nextNum;
             if (nextNum >=num) {
                 break;
             }
+            System.out.println(nextNum);
+            firstNum = secondNum;
+            secondNum = nextNum;
+
         }
     }
 
