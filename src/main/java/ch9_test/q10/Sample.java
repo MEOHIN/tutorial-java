@@ -19,14 +19,14 @@ public class Sample {
         System.out.println("짝수입니다.");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Random r = new Random();
-        try {
             for (int i = 0; i < 10; i++) {
-                execute(r.nextInt(10));
+                try {
+                    execute(r.nextInt(10));
+                } catch (OddException e) {
+                    e.printStackTrace();
+                }
             }
-        } catch (OddException e) {
-            e.printStackTrace();
-        }
     }
 }
