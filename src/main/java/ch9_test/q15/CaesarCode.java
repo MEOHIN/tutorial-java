@@ -26,10 +26,8 @@ public class CaesarCode {
         StringBuilder sbOut = new StringBuilder();
         for (int j = 0; j < inStr.length(); j++) {
             int n = alphabet.indexOf(inStr.charAt(j));
-            System.out.printf("입력어 알파벳 순: %d\n",n);
             int outNum = n + inNum;
             outNum = outNum % alphabet.length();
-            System.out.printf("출력어 알파벳 순: %d\n",outNum);
             sbOut.append(alphabet.charAt(outNum));
         }
         System.out.println(sbOut);
