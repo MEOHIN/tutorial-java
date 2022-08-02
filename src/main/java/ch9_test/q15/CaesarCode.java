@@ -16,9 +16,11 @@ import java.util.Scanner;
  */
 
 public class CaesarCode {
+    static int MAX_CHAR_LEN = 26;
+
     static void translate(String inStr, int inNum) {
         StringBuilder sbIn = new StringBuilder();
-        for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < MAX_CHAR_LEN; i++) {
             sbIn.append((char) (65+i));
         }
         String alphabet = sbIn.toString();
