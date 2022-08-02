@@ -27,7 +27,9 @@ public class CaesarCode {
         for (int j = 0; j < inStr.length(); j++) {
             int n = alphabet.indexOf(inStr.charAt(j));
             int outNum = n + inNum;
-            outNum = outNum % alphabet.length();
+            // 7 %  2 = 1; 7 =  2 * 3(몫) + 1
+            // 5 % 26 = 5; 5 = 26 * 0(몫) + 5
+            outNum %= alphabet.length();
             sbOut.append(alphabet.charAt(outNum));
         }
         System.out.println(sbOut);
